@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riesgo de Inundación - Esmeraldas</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background: #f0f0f0; }
+        header {
+            background: #1a5276;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+        header h1 { font-size: 22px; }
+        header p  { font-size: 13px; margin-top: 4px; opacity: 0.85; }
+        #mapa-container {
+            width: 100%;
+            height: calc(100vh - 70px);
+        }
+        #mapa-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Clasificación de Riesgo de Inundación por Parroquia</h1>
+        <p>Provincia de Esmeraldas, Ecuador — Modelo de Aprendizaje Automático</p>
+    </header>
+    <div id="mapa-container">
+        {{ mapa | safe }}
+    </div>
+</body>
+</html>
